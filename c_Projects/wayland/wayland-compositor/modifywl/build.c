@@ -19,9 +19,9 @@ int main(int argc, char **argv) {
   asprintf(&Lib, "-L%s/projects/c_Projects/wayland/wlroots/build", Home);
   NOB_GO_REBUILD_URSELF(argc, argv);
   cmd_append(&cmd, "cc");
-  cmd_append(&cmd, "main.c");
+  cmd_append(&cmd, "src/main.c");
   /* cmd_append(&cmd, "-static"); */
-  cmd_append(&cmd, "-o", "modifywl");
+  cmd_append(&cmd, "-o", "build/modifywl");
   cmd_append(&cmd, "-g");
   cmd_append(&cmd, "-Werror");
   /* cmd_append(&cmd, "-Wall"); */
