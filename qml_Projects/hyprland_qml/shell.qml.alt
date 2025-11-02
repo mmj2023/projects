@@ -1,0 +1,36 @@
+import QtQuick 2.15
+import QtQuick.Window 2.15
+
+Window {
+    id: widget
+    width: 200
+    height: 100
+    // color: "transparent"
+    color: "#ff000000"
+    visible: true
+    flags: Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool
+
+    Rectangle {
+        anchors.fill: parent
+        radius: 8
+        color: "#ff000000"   // ARGB: fully transparent black
+        border.color: "white"
+        border.width: 1
+
+        Text {
+            id: clockText
+            anchors.centerIn: parent
+            text: Qt.formatDateTime(new Date(), "hh:mm:ss")
+            color: "white"
+            font.pixelSize: 20
+        }
+    }
+
+    // Update clock every second
+    Timer {
+        interval: 1000
+        running: true
+        repeat: true
+        onTriggered: clockText.text = Qt.formatDateTime(new Date(), "hh:mm:ss")
+    }
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neuralink Company Presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #0fffc3;
+      --secondary: #1a1a2e;
+      --accent: #232344;
+      --text: #f1f1f1;
+      --highlight: #ff5e62;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, var(--secondary) 70%, #232344 100%);
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .slide {
+      display: none;
+      max-width: 800px;
+      margin: 60px auto 0 auto;
+      background: rgba(35, 35, 68, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+      padding: 48px 40px 40px 40px;
+      position: relative;
+      animation: fadeIn 0.6s;
+    }
+    .active {
+      display: block;
+    }
+    h1, h2 {
+      color: var(--primary);
+      letter-spacing: 1px;
+      margin-top: 0;
+      text-shadow: 0 2px 12px #0fffc3b0;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+    ul {
+      padding-left: 20px;
+      font-size: 1.15rem;
+    }
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .slide p, .slide blockquote {
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+    blockquote {
+      font-style: italic;
+      color: var(--highlight);
+      border-left: 4px solid var(--primary);
+      padding-left: 18px;
+      margin: 18px 0;
+      background: rgba(10,255,195,0.06);
+    }
+    .nav {
+      text-align: center;
+      margin: 30px 0 0 0;
+    }
+    button {
+      font-size: 1.15rem;
+      margin: 0 18px;
+      padding: 10px 36px;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(90deg, var(--primary), var(--highlight));
+      color: #181826;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px #0fffc399;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    button:disabled {
+      background: #313150;
+      color: #888;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+    .slide-number {
+      position: absolute;
+      bottom: 18px;
+      right: 32px;
+      font-size: 1.1rem;
+      color: #0fffc3b0;
+      opacity: 0.7;
+    }
+    @media (max-width: 900px) {
+      .slide {
+        max-width: 97vw;
+        padding: 32px 10vw 32px 10vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .slide {
+        padding: 20px 4vw 20px 4vw;
+      }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.2rem; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    /* Neon glow effect */
+    .neon {
+      color: var(--primary);
+      text-shadow:
+        0 0 8px #0fffc3,
+        0 0 16px #0fffc3,
+        0 0 24px #0fffc3;
+    }
+    /* Accent bar for section headers */
+    .accent-bar {
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--highlight));
+      border-radius: 2px;
+      margin-bottom: 20px;
+      margin-top: -10px;
+    }
+    /* Logo placeholder */
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0fffc3 60%, #232344 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #232344;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 0 20px #0fffc3b0;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide active">
+    <div class="logo">N</div>
+    <h1 class="neon">Neuralink: Revolutionizing Brain-Computer Interfaces</h1>
+    <p>Presented by: <b>[Your Name]</b><br>Date: <b>[Presentation Date]</b></p>
+    <div class="slide-number">1 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Company Overview</h2>
+    <ul>
+      <li><b>Founded:</b> 2016, San Francisco, California</li>
+      <li><b>Privately owned neurotechnology company by Elon Musk</b></li>
+      <li><b>Mission:</b> Develop ultra-high bandwidth brain-machine interfaces (BMIs)</li>
+      <li><b>Team:</b> 400+ experts in neuroscience, robotics, and engineering</li>
+      <li><b>Goal:</b> Enable direct communication between brains and computers</li>
+    </ul>
+    <div class="slide-number">2 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Market Analysis &amp; Strategic Recommendations</h2>
+    <b>Market Analysis:</b>
+    <ul>
+      <li>Neuralink leads in implantable BMI technology</li>
+      <li>Competes with Synchron, Kernel, and academic research labs</li>
+      <li>Growing demand for solutions to neurological disorders</li>
+      <li>Regulatory hurdles and public acceptance are key challenges</li>
+      <li>Partnerships with hospitals and research institutions are crucial</li>
+    </ul>
+    <b>Recommendations:</b>
+    <ul>
+      <li>Accelerate clinical trials for FDA approval</li>
+      <li>Expand partnerships with medical centers and universities</li>
+      <li>Invest in public education about BMI safety and ethics</li>
+      <li>Explore non-medical applications</li>
+    </ul>
+    <div class="slide-number">3 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>About the CEO</h2>
+    <ul>
+      <li><b>Elon Musk (CEO and Co-Founder of Neuralink)</b></li>
+      <li>Serial entrepreneur known for Tesla, SpaceX, and The Boring Company</li>
+      <li>Focuses on merging AI with human cognition</li>
+      <li>Advocates for ethical and responsible neurotechnology development</li>
+    </ul>
+    <div class="slide-number">4 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Leadership Style</h2>
+    <ul>
+      <li><b>Transformational:</b> Inspires teams with a vision of human-AI symbiosis</li>
+      <li><b>Autocratic:</b> Sets ambitious goals and timelines, directly involved in R&amp;D</li>
+      <li><b>Hands-on:</b> Regularly participates in technical reviews and product demos</li>
+    </ul>
+    <div class="slide-number">5 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Quotes by Elon Musk</h2>
+    <blockquote>“If you can’t beat AI, join it.”</blockquote>
+    <blockquote>“Neuralink’s long-term goal is to achieve a symbiosis with artificial intelligence.”</blockquote>
+    <div class="slide-number">6 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Organizational Structure</h2>
+    <ul>
+      <li><b>Flat structure</b> for rapid innovation</li>
+      <li>Teams organized by specialty: neuroscience, robotics, software, clinical</li>
+      <li>Few management layers; direct reporting to project leads or Musk</li>
+    </ul>
+    <div class="slide-number">7 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>PESTEL Analysis</h2>
+    <ul>
+      <li><b>Political:</b> Heavily regulated by FDA and international health agencies; ethical debates</li>
+      <li><b>Economic:</b> High R&amp;D costs; large potential market</li>
+      <li><b>Social:</b> Public curiosity and concern about brain implants</li>
+      <li><b>Technological:</b> Advanced robotics and machine learning</li>
+      <li><b>Environmental:</b> Minimal direct impact; focus on biocompatible materials</li>
+      <li><b>Legal:</b> Medical device regulations; data privacy laws</li>
+    </ul>
+    <div class="slide-number">8 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>SWOT Analysis</h2>
+    <ul>
+      <li><b>Strengths:</b> Cutting-edge tech, Musk’s backing, first-mover advantage</li>
+      <li><b>Weaknesses:</b> Reliance on Musk, high costs, public skepticism</li>
+      <li><b>Opportunities:</b> Medical treatments, consumer tech, global partnerships</li>
+      <li><b>Threats:</b> Regulations, ethics, competition</li>
+    </ul>
+    <div class="slide-number">9 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Porter’s Five Forces</h2>
+    <ul>
+      <li><b>Competitive Rivalry:</b> Moderate</li>
+      <li><b>Threat of New Entrants:</b> Low</li>
+      <li><b>Bargaining Power of Suppliers:</b> Moderate</li>
+      <li><b>Bargaining Power of Buyers:</b> Low</li>
+      <li><b>Threat of Substitutes:</b> Low</li>
+    </ul>
+    <div class="slide-number">10 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>BCG Matrix</h2>
+    <ul>
+      <li><b>Stars:</b> Neuralink BMI device (N1 Implant), surgical robot</li>
+      <li><b>Cash Cows:</b> Future medical treatments</li>
+      <li><b>Question Marks:</b> Consumer applications, memory enhancement</li>
+      <li><b>Dogs:</b> Early prototypes</li>
+    </ul>
+    <div class="slide-number">11 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Product Life Cycle</h2>
+    <ul>
+      <li><b>Introduction:</b> N1 Implant (clinical trials)</li>
+      <li><b>Growth:</b> Expansion into more conditions</li>
+      <li><b>Maturity:</b> Widespread adoption (future)</li>
+      <li><b>Decline:</b> Early prototypes replaced</li>
+    </ul>
+    <div class="slide-number">12 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Implementation Roadmap</h2>
+    <ul>
+      <li><b>2025:</b> Complete human clinical trials, seek FDA approval</li>
+      <li><b>2026:</b> Launch first commercial BMI for medical use</li>
+      <li><b>2027:</b> Expand indications</li>
+      <li><b>2028:</b> Explore consumer and AI-integration</li>
+      <li><b>2029+:</b> Advance towards human-AI symbiosis</li>
+    </ul>
+    <div class="slide-number">13 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Interactive Component</h2>
+    <p>Live Q&amp;A or Poll:<br><b>“Would you consider a brain-computer interface if it could restore lost abilities?”</b></p>
+    <div class="slide-number">14 / 15</div>
+  </div>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Thank You / Q&amp;A</h2>
+    <p>Thank you for your attention!<br>Questions?<br>Contact: <b>[Your Email]</b></p>
+    <div class="slide-number">15 / 15</div>
+  </div>
+  <div class="nav">
+    <button id="prev" onclick="plusSlides(-1)">Previous</button>
+    <button id="next" onclick="plusSlides(1)">Next</button>
+  </div>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlide(n) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === n);
+      });
+      document.getElementById('prev').disabled = n === 0;
+      document.getElementById('next').disabled = n === slides.length - 1;
+    }
+    function plusSlides(n) {
+      slideIndex += n;
+      if (slideIndex < 0) slideIndex = 0;
+      if (slideIndex >= slides.length) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+    showSlide(slideIndex);
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') plusSlides(1);
+      if (e.key === 'ArrowLeft') plusSlides(-1);
+    });
+  </script>
+</body>
+</html>

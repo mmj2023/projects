@@ -1,0 +1,4 @@
+#!/usr/bin/env -S bc -q
+x = 54546589^5
+print x , " Hello, World!\n"
+halt

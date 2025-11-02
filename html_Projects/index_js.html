@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neuralink Company Presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --primary: #0fffc3;
+      --secondary: #1a1a2e;
+      --accent: #232344;
+      --text: #f1f1f1;
+      --highlight: #ff5e62;
+      --card-bg: rgba(35, 35, 68, 0.97);
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, var(--secondary) 70%, #232344 100%);
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .slide {
+      display: none;
+      max-width: 900px;
+      margin: 60px auto 0 auto;
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+      padding: 48px 40px 40px 40px;
+      position: relative;
+      animation: fadeIn 0.6s;
+    }
+    .active { display: block; }
+    h1, h2 {
+      color: var(--primary);
+      letter-spacing: 1px;
+      margin-top: 0;
+      text-shadow: 0 2px 12px #0fffc3b0;
+    }
+    h1 { font-size: 2.7rem; margin-bottom: 20px; }
+    h2 { font-size: 2rem; margin-bottom: 18px; }
+    ul { padding-left: 20px; font-size: 1.13rem; }
+    li { margin-bottom: 10px; line-height: 1.6; }
+    .slide p, .slide blockquote { font-size: 1.16rem; line-height: 1.7; }
+    blockquote {
+      font-style: italic;
+      color: var(--highlight);
+      border-left: 4px solid var(--primary);
+      padding-left: 18px;
+      margin: 18px 0;
+      background: rgba(10,255,195,0.06);
+    }
+    .nav {
+      text-align: center;
+      margin: 30px 0 0 0;
+    }
+    button {
+      font-size: 1.15rem;
+      margin: 0 18px;
+      padding: 10px 36px;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(90deg, var(--primary), var(--highlight));
+      color: #181826;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px #0fffc399;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    button:disabled {
+      background: #313150;
+      color: #888;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+    .slide-number {
+      position: absolute;
+      bottom: 18px;
+      right: 32px;
+      font-size: 1.1rem;
+      color: #0fffc3b0;
+      opacity: 0.7;
+    }
+    @media (max-width: 900px) {
+      .slide { max-width: 97vw; padding: 32px 10vw 32px 10vw; }
+    }
+    @media (max-width: 600px) {
+      .slide { padding: 20px 4vw 20px 4vw; }
+      h1 { font-size: 1.5rem; }
+      h2 { font-size: 1.1rem; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .neon {
+      color: var(--primary);
+      text-shadow:
+        0 0 8px #0fffc3,
+        0 0 16px #0fffc3,
+        0 0 24px #0fffc3;
+    }
+    .accent-bar {
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--highlight));
+      border-radius: 2px;
+      margin-bottom: 20px;
+      margin-top: -10px;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0fffc3 60%, #232344 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #232344;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 0 20px #0fffc3b0;
+      letter-spacing: 2px;
+    }
+    .img-center {
+      display: block;
+      margin: 24px auto 24px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px #0fffc388;
+      max-width: 350px;
+      width: 90%;
+      background: #222;
+    }
+    .chart-container {
+      width: 95%;
+      max-width: 520px;
+      margin: 32px auto 24px auto;
+      background: #181826;
+      border-radius: 18px;
+      box-shadow: 0 2px 18px #0fffc344;
+      padding: 18px 8px 8px 8px;
+    }
+    .caption {
+      text-align: center;
+      font-size: 0.98rem;
+      color: #aaa;
+      margin-top: -15px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Slide 1: Title -->
+  <div class="slide active">
+    <div class="logo">N</div>
+    <h1 class="neon">Neuralink: Revolutionizing Brain-Computer Interfaces</h1>
+    <p>Presented by: <b>[Your Name]</b><br>Date: <b>[Presentation Date]</b></p>
+    <div class="slide-number">1 / 15</div>
+  </div>
+  <!-- Slide 2: Company Overview -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Company Overview</h2>
+    <ul>
+      <li><b>Founded:</b> 2016, San Francisco, California</li>
+      <li><b>Privately owned neurotechnology company by Elon Musk</b></li>
+      <li><b>Mission:</b> Develop ultra-high bandwidth brain-machine interfaces (BMIs)</li>
+      <li><b>Team:</b> 400+ experts in neuroscience, robotics, and engineering</li>
+      <li><b>Goal:</b> Enable direct communication between brains and computers</li>
+    </ul>
+    <img class="img-center" src="https://neuralink.com/assets/static/exploded.C8eSmSDu.webp" alt="Neuralink N1 Implant">
+    <div class="caption">Neuralink's N1 Implant (source: neuralink.com)</div>
+    <div class="slide-number">2 / 15</div>
+  </div>
+  <!-- Slide 3: Market Analysis & Strategic Recommendations -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Market Analysis & Strategic Recommendations</h2>
+    <div class="chart-container">
+      <canvas id="marketShareChart"></canvas>
+    </div>
+    <div class="caption">Estimated BMI Market Share (2025, illustrative)</div>
+    <b>Market Analysis:</b>
+    <ul>
+      <li>Neuralink leads in implantable BMI technology</li>
+      <li>Competes with Synchron, Kernel, and academic research labs</li>
+      <li>Growing demand for solutions to neurological disorders</li>
+      <li>Regulatory hurdles and public acceptance are key challenges</li>
+      <li>Partnerships with hospitals and research institutions are crucial</li>
+    </ul>
+    <b>Recommendations:</b>
+    <ul>
+      <li>Accelerate clinical trials for FDA approval</li>
+      <li>Expand partnerships with medical centers and universities</li>
+      <li>Invest in public education about BMI safety and ethics</li>
+      <li>Explore non-medical applications</li>
+    </ul>
+    <div class="slide-number">3 / 15</div>
+  </div>
+  <!-- Slide 4: About the CEO -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>About the CEO</h2>
+    <img class="img-center" src="https://fortune.com/img-assets/wp-content/uploads/2023/11/Elon-Org_Neuralink.png" alt="Elon Musk">
+    <div class="caption">Elon Musk, CEO and Co-Founder (Photo (source): https://fortune.com)</div>
+    <ul>
+      <li><b>Elon Musk (CEO and Co-Founder of Neuralink)</b></li>
+      <li>Serial entrepreneur known for Tesla, SpaceX, and The Boring Company</li>
+      <li>Focuses on merging AI with human cognition</li>
+      <li>Advocates for ethical and responsible neurotechnology development</li>
+    </ul>
+    <div class="slide-number">4 / 15</div>
+  </div>
+  <!-- Slide 5: Leadership Style -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Leadership Style</h2>
+    <div class="chart-container">
+      <canvas id="leadershipChart"></canvas>
+    </div>
+    <div class="caption">Elon Musk's Leadership Styles at Neuralink</div>
+    <ul>
+      <li><b>Transformational:</b> Inspires teams with a vision of human-AI symbiosis</li>
+      <li><b>Autocratic:</b> Sets ambitious goals and timelines, directly involved in R&amp;D</li>
+      <li><b>Hands-on:</b> Regularly participates in technical reviews and product demos</li>
+    </ul>
+    <div class="slide-number">5 / 15</div>
+  </div>
+  <!-- Slide 6: Quotes by Elon Musk -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Quotes by Elon Musk</h2>
+    <blockquote>“If you can’t beat AI, join it.”</blockquote>
+    <blockquote>“Neuralink’s long-term goal is to achieve a symbiosis with artificial intelligence.”</blockquote>
+    <div class="slide-number">6 / 15</div>
+  </div>
+  <!-- Slide 7: Organizational Structure -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Organizational Structure</h2>
+    <img class="img-center" src="https://fortune.com/img-assets/wp-content/uploads/2022/01/NEU.0322.R1_ElonMusk.jpg" alt="Neuralink Surgical Robot">
+<!-- <img src="/home/mdmmj/projects/html/assets/2025-06-18-11-27-07.png" alt=""> -->
+    <div class="caption">Neuralink's Surgical Robot (source: https://fortune.com)</div>
+    <ul>
+      <li><b>Flat structure</b> for rapid innovation</li>
+      <li>Teams organized by specialty: neuroscience, robotics, software, clinical</li>
+      <li>Few management layers; direct reporting to project leads or Musk</li>
+    </ul>
+    <div class="slide-number">7 / 15</div>
+  </div>
+  <!-- Slide 8: PESTEL Analysis -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>PESTEL Analysis</h2>
+    <div class="chart-container">
+      <canvas id="pestelChart"></canvas>
+    </div>
+    <div class="caption">PESTEL Factors Impacting Neuralink</div>
+    <ul>
+      <li><b>Political:</b> Heavily regulated by FDA and international health agencies; ethical debates</li>
+      <li><b>Economic:</b> High R&amp;D costs; large potential market</li>
+      <li><b>Social:</b> Public curiosity and concern about brain implants</li>
+      <li><b>Technological:</b> Advanced robotics and machine learning</li>
+      <li><b>Environmental:</b> Minimal direct impact; focus on biocompatible materials</li>
+      <li><b>Legal:</b> Medical device regulations; data privacy laws</li>
+    </ul>
+    <div class="slide-number">8 / 15</div>
+  </div>
+  <!-- Slide 9: SWOT Analysis -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>SWOT Analysis</h2>
+    <div class="chart-container">
+      <canvas id="swotChart"></canvas>
+    </div>
+    <div class="caption">Neuralink SWOT Overview</div>
+    <ul>
+      <li><b>Strengths:</b> Cutting-edge tech, Musk’s backing, first-mover advantage</li>
+      <li><b>Weaknesses:</b> Reliance on Musk, high costs, public skepticism</li>
+      <li><b>Opportunities:</b> Medical treatments, consumer tech, global partnerships</li>
+      <li><b>Threats:</b> Regulations, ethics, competition</li>
+    </ul>
+    <div class="slide-number">9 / 15</div>
+  </div>
+  <!-- Slide 10: Porter's Five Forces -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Porter’s Five Forces</h2>
+    <div class="chart-container">
+      <canvas id="portersChart"></canvas>
+    </div>
+    <div class="caption">Porter's Five Forces for Neuralink</div>
+    <ul>
+      <li><b>Competitive Rivalry:</b> Moderate</li>
+      <li><b>Threat of New Entrants:</b> Low</li>
+      <li><b>Bargaining Power of Suppliers:</b> Moderate</li>
+      <li><b>Bargaining Power of Buyers:</b> Low</li>
+      <li><b>Threat of Substitutes:</b> Low</li>
+    </ul>
+    <div class="slide-number">10 / 15</div>
+  </div>
+  <!-- Slide 11: BCG Matrix -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>BCG Matrix</h2>
+    <img class="img-center" src="https://i.imgur.com/8U7zHk6.png" alt="BCG Matrix for Neuralink">
+    <div class="caption">BCG Matrix (illustrative, source: AI-generated)</div>
+    <ul>
+      <li><b>Stars:</b> Neuralink BMI device (N1 Implant), surgical robot</li>
+      <li><b>Cash Cows:</b> Future medical treatments</li>
+      <li><b>Question Marks:</b> Consumer applications, memory enhancement</li>
+      <li><b>Dogs:</b> Early prototypes</li>
+    </ul>
+    <div class="slide-number">11 / 15</div>
+  </div>
+  <!-- Slide 12: Product Life Cycle -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Product Life Cycle</h2>
+    <img class="img-center" src="https://i.imgur.com/8nE9l9g.png" alt="Product Life Cycle Chart">
+    <div class="caption">Product Life Cycle: Neuralink Devices (illustrative)</div>
+    <ul>
+      <li><b>Introduction:</b> N1 Implant (clinical trials)</li>
+      <li><b>Growth:</b> Expansion into more conditions</li>
+      <li><b>Maturity:</b> Widespread adoption (future)</li>
+      <li><b>Decline:</b> Early prototypes replaced</li>
+    </ul>
+    <div class="slide-number">12 / 15</div>
+  </div>
+  <!-- Slide 13: Implementation Roadmap -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Implementation Roadmap</h2>
+    <div class="chart-container">
+      <canvas id="roadmapChart"></canvas>
+    </div>
+    <div class="caption">Neuralink's Implementation Timeline</div>
+    <ul>
+      <li><b>2025:</b> Complete human clinical trials, seek FDA approval</li>
+      <li><b>2026:</b> Launch first commercial BMI for medical use</li>
+      <li><b>2027:</b> Expand indications</li>
+      <li><b>2028:</b> Explore consumer and AI-integration</li>
+      <li><b>2029+:</b> Advance towards human-AI symbiosis</li>
+    </ul>
+    <div class="slide-number">13 / 15</div>
+  </div>
+  <!-- Slide 14: Interactive Component -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Interactive Component</h2>
+    <p>Live Q&amp;A or Poll:<br><b>“Would you consider a brain-computer interface if it could restore lost abilities?”</b></p>
+    <div class="slide-number">14 / 15</div>
+  </div>
+  <!-- Slide 15: Thank You / Q&A -->
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <h2>Thank You / Q&amp;A</h2>
+    <p>Thank you for your attention!<br>Questions?<br>Contact: <b>[Your Email]</b></p>
+    <div class="slide-number">15 / 15</div>
+  </div>
+  <div class="nav">
+    <button id="prev" onclick="plusSlides(-1)">Previous</button>
+    <button id="next" onclick="plusSlides(1)">Next</button>
+  </div>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlide(n) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === n);
+      });
+      document.getElementById('prev').disabled = n === 0;
+      document.getElementById('next').disabled = n === slides.length - 1;
+    }
+    function plusSlides(n) {
+      slideIndex += n;
+      if (slideIndex < 0) slideIndex = 0;
+      if (slideIndex >= slides.length) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+    showSlide(slideIndex);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') plusSlides(1);
+      if (e.key === 'ArrowLeft') plusSlides(-1);
+    });
+
+    // Chart.js Graphs
+    window.onload = function() {
+      // Market Share Pie Chart
+      new Chart(document.getElementById('marketShareChart').getContext('2d'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Neuralink', 'Synchron', 'Kernel', 'Others'],
+          datasets: [{
+            data: [44, 26, 18, 12],
+            backgroundColor: [
+              'rgba(10,255,195,0.9)',
+              'rgba(255,94,98,0.8)',
+              'rgba(100,100,255,0.8)',
+              'rgba(180,180,180,0.7)'
+            ],
+            borderWidth: 2,
+            borderColor: '#181826'
+          }]
+        },
+        options: {
+          plugins: { legend: { labels: { color: '#f1f1f1', font: {size: 16} } } }
+        }
+      });
+
+      // Leadership Style Bar Chart
+      new Chart(document.getElementById('leadershipChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels: ['Transformational', 'Autocratic', 'Hands-on'],
+          datasets: [{
+            label: 'Leadership Style (%)',
+            data: [50, 30, 20],
+            backgroundColor: [
+              'rgba(10,255,195,0.7)',
+              'rgba(255,94,98,0.7)',
+              'rgba(100,100,255,0.7)'
+            ],
+            borderRadius: 8
+          }]
+        },
+        options: {
+          scales: {
+            x: { ticks: { color: '#f1f1f1', font: {size: 14} } },
+            y: { beginAtZero: true, ticks: { color: '#f1f1f1', font: {size: 14} } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // PESTEL Radar Chart
+      new Chart(document.getElementById('pestelChart').getContext('2d'), {
+        type: 'radar',
+        data: {
+          labels: ['Political', 'Economic', 'Social', 'Technological', 'Environmental', 'Legal'],
+          datasets: [{
+            label: 'Impact Level',
+            data: [8, 7, 6, 9, 4, 8],
+            backgroundColor: 'rgba(10,255,195,0.2)',
+            borderColor: 'rgba(10,255,195,1)',
+            pointBackgroundColor: 'rgba(255,94,98,1)'
+          }]
+        },
+        options: {
+          scales: {
+            r: {
+              angleLines: { color: '#444' },
+              grid: { color: '#444' },
+              pointLabels: { color: '#f1f1f1', font: {size: 14} },
+              ticks: { color: '#f1f1f1' }
+            }
+          },
+          plugins: { legend: { labels: { color: '#f1f1f1' } } }
+        }
+      });
+
+      // SWOT Horizontal Bar Chart
+      new Chart(document.getElementById('swotChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels: ['Strengths', 'Weaknesses', 'Opportunities', 'Threats'],
+          datasets: [{
+            label: 'SWOT Factors',
+            data: [9, 6, 8, 7],
+            backgroundColor: [
+              'rgba(10,255,195,0.7)',
+              'rgba(255,94,98,0.7)',
+              'rgba(100,100,255,0.7)',
+              'rgba(255,200,0,0.7)'
+            ],
+            borderRadius: 8
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: {
+            x: { beginAtZero: true, max: 10, ticks: { color: '#f1f1f1', font: {size: 14} } },
+            y: { ticks: { color: '#f1f1f1', font: {size: 14} } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // Porter's Five Forces Radar Chart
+      new Chart(document.getElementById('portersChart').getContext('2d'), {
+        type: 'radar',
+        data: {
+          labels: [
+            'Competitive Rivalry',
+            'Threat of New Entrants',
+            'Bargaining Power of Suppliers',
+            'Bargaining Power of Buyers',
+            'Threat of Substitutes'
+          ],
+          datasets: [{
+            label: 'Force Level',
+            data: [6, 2, 4, 3, 2],
+            backgroundColor: 'rgba(255,94,98,0.2)',
+            borderColor: 'rgba(255,94,98,1)',
+            pointBackgroundColor: 'rgba(10,255,195,1)'
+          }]
+        },
+        options: {
+          scales: {
+            r: {
+              angleLines: { color: '#444' },
+              grid: { color: '#444' },
+              pointLabels: { color: '#f1f1f1', font: {size: 14} },
+              ticks: { color: '#f1f1f1' }
+            }
+          },
+          plugins: { legend: { labels: { color: '#f1f1f1' } } }
+        }
+      });
+
+      // Roadmap Line Chart
+      new Chart(document.getElementById('roadmapChart').getContext('2d'), {
+        type: 'line',
+        data: {
+          labels: ['2025', '2026', '2027', '2028', '2029+'],
+          datasets: [{
+            label: 'Milestone Progress',
+            data: [1, 2, 3, 4, 5],
+            backgroundColor: 'rgba(10,255,195,0.3)',
+            borderColor: 'rgba(10,255,195,1)',
+            borderWidth: 3,
+            pointBackgroundColor: 'rgba(255,94,98,1)',
+            tension: 0.4
+          }]
+        },
+        options: {
+          scales: {
+            x: { ticks: { color: '#f1f1f1', font: {size: 14} } },
+            y: { display: false }
+          },
+          plugins: { legend: { labels: { color: '#f1f1f1' } } }
+        }
+      });
+    };
+  </script>
+</body>
+</html>
