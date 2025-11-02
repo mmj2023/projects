@@ -1,0 +1,18 @@
+# Ignore Windows executables
+*.exe
+
+# Ignore Linux/macOS executables (no extension, marked as executable)
+# This ignores any file with the executable bit set
+# but since Git can't filter by permissions in .gitignore,
+# you usually ignore by directory or pattern, e.g.:
+# bin/
+build/
+# dist/
+*.out
+*.o
+*.so
+*.a
+*.bin
+
+# Ignore Node.js dependencies
+node_modules/
