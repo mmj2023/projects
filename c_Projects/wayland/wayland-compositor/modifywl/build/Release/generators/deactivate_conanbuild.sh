@@ -1,0 +1,1 @@
+. "/home/mdmmj/projects/c_Projects/wayland/wayland-compositor/build/Release/generators/deactivate_conanbuildenv-release-x86_64.sh"

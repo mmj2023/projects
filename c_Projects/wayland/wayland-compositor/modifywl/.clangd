@@ -1,0 +1,4 @@
+CompileFlags:
+  Add: [-DWLR_USE_UNSTABLE,
+        -isystem, ../../wlroots/include,
+        -isystem, /usr/include/pixman-1]

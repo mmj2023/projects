@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/mdmmj/projects/cpp_Projects/wayland/wayland-compositor/demo-mir-compositor/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

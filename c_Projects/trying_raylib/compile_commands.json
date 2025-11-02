@@ -1,0 +1,4 @@
+"arguments": [
+  "gcc",
+  "-~projects/c_projects/raylib/build/raylib/include",
+]

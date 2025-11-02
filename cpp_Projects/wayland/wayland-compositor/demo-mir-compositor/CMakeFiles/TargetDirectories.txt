@@ -1,0 +1,3 @@
+/home/mdmmj/projects/cpp_Projects/wayland/wayland-compositor/demo-mir-compositor/CMakeFiles/demo-mir-compositor.dir
+/home/mdmmj/projects/cpp_Projects/wayland/wayland-compositor/demo-mir-compositor/CMakeFiles/edit_cache.dir
+/home/mdmmj/projects/cpp_Projects/wayland/wayland-compositor/demo-mir-compositor/CMakeFiles/rebuild_cache.dir

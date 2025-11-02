@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/demo-mir-compositor.dir/link.d "CMakeFiles/demo-mir-compositor.dir/main.cpp.o" -o demo-mir-compositor  /usr/lib/libmiral.so /usr/lib/libmircore.so
