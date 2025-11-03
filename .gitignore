@@ -1,18 +1,53 @@
-# Ignore Windows executables
-*.exe
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
 
-# Ignore Linux/macOS executables (no extension, marked as executable)
-# This ignores any file with the executable bit set
-# but since Git can't filter by permissions in .gitignore,
-# you usually ignore by directory or pattern, e.g.:
-# bin/
-build/
-# dist/
-*.out
-*.o
-*.so
-*.a
-*.bin
-
-# Ignore Node.js dependencies
+# --- Node.js ---
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Compiled object files ---
+*.o
+*.obj
+*.lo
+*.la
+*.slo
+
+# --- Compiled dynamic libraries ---
+*.so
+*.dylib
+*.dll
+
+# --- Compiled static libraries ---
+*.a
+*.lib
+
+# --- Executables / binaries ---
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.elf
+
+# --- Common build dirs ---
+# /bin/
+/build/
+/dist/
+/target/
+/coverage/
+
+# --- Logs ---
+*.log
+
+# --- Misc ---
+*.pid
+*.seed
+*.pid.lock
