@@ -1,0 +1,25 @@
+# the hell let's see
+
+## fix nvim
+get rid of flash.nvim
+
+# fix dotfiles
+
+use sh_bin instead of local for shell scripts ( env_wrapper_wayland should be in sh_bin not local/
+
+
+## my WTD ( want to do ) stuff
+
+- fix subtle behaviour changes in hyprland
+
+- use fabric command command line tool and also integrate it into neovim and refresh my ai set in neovim
+
+- figure out more about making my own wayland/also x11 compositor
+
+- learn docker and podman properly.
+
+### my daily things that I wanna do
+
+- use brilliant
+- use sololearn
+- use duolingo
