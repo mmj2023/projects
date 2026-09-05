@@ -1,3 +1,6 @@
 [submodule "rust_Projects/hybrid"]
 	path = rust_Projects/hybrid
 	url = https://github.com/mmj2023/hybrid.git
+[submodule "qml_Projects/MyQuickshell"]
+	path = qml_Projects/MyQuickshell
+	url = https://github.com/mmj2023/MyQuickshell.git
